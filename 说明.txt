@@ -1,0 +1,4 @@
+微信公众平台:申请一个账号 管理小程序，获取微信ID
+postman :测试后台提供的接口
+微信开发者工具
+安装步骤：https://jingyan.baidu.com/article/e75aca852078a5142edac6c5.html

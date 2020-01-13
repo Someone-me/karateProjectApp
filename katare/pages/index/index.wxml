@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view id="index">
+
+    <swiper class='' style="width: {{imageWidth}}px; height: {{imageHeight}}px;" autoplay='true' interval='4000' circular='true' indicator-dots='ture' indicator-color='rgba(0,0,0,0.3)' indicator-active-color='red'>    
+        <block wx:for='{{image}}'>
+            <swiper-item >      
+                <image style="width: {{imageWidth}}px; height: {{imageHeight}}px;" src='{{item}}'></image>    
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="row text-center row-center header-nav energized-bg ">
+        <navigator class="col " url="../query/query" open-type="navigate" hover-class="none">
+            <view class="iconfont icon-wodedingdan"></view>
+            <text class="icon-text">报名查询</text>
+        </navigator>
+
+        <navigator class="col " url="../score/score" open-type="navigate" hover-class="none">
+            <view class="iconfont icon-xiangguanjiansuo"></view>
+            <text class="icon-text">成绩查询</text>
+        </navigator>
+    </view>
+
+    <view class="item item-divider  light-bg item-icon-left headLine" style="font-size: 0.9rem;" bindtap="handleClick">
+        <view class="iconfont icon-shengyin energized" ></view>
+        新闻资讯
+    </view>
+    
+    <view class="light-bg margin-top" style="padding-left: 5%;padding-right: 5%;font-size: 0.8rem;" wx:for='{{news}}' >
+        <navigator url='{{item.url}}'><text  style="">{{item.title}}</text></navigator>
+    </view>
+    
+
+</view>

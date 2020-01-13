@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/account/account",
+    "pages/account/login",
+    "pages/account/register",
+    "pages/news/news",
+    "pages/info/info",
+    "pages/auth/auth",
+    "pages/query/query",
+    "pages/score/score"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#f26604"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#f26604",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabs/home-off.png",
+        "selectedIconPath": "images/tabs/home-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "iconPath": "images/tabs/user-off.png",
+        "selectedIconPath": "images/tabs/user-on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,55 @@
+<!--pages/account/account.wxml-->
+
+    <view class="list ">
+        <view class="item item-avatar" wx:if="{{!isLogin}}">
+            <image src="../../images/logo.jpg"></image>
+            <view class="p text-center">登录http://39.107.68.116了解更多</view>
+
+            <view class="p row row-horizontal-around" open-type="getUserInfo">
+                <navigator url="register"  open-type="navigate" hover-class="none"
+                           class="col-30 button button-assertive ">注册
+                </navigator>
+                <navigator url="login"  open-type="navigate" hover-class="none"
+                           class="col-30 button button-assertive ">登录
+                </navigator>
+
+            </view>
+            
+        </view>
+        <view class="item item-avatar login" wx:if="{{isLogin}}">
+            <image src="{{temp.userInfo.avatarUrl}}"></image>
+            <view>{{temp.userInfo.nickName}}
+                <text class="sex calm-bg light">{{temp.userInfo.gender==1?'男':'女'}}</text>
+            </view>
+            <view class="p text-center">登录http://39.107.68.116了解更多</view>
+
+        </view>
+        <navigator url="../info/info" open-type="navigate"
+                   hover-class="navigator-hover" class="item item-icon-left item-icon-right margin-top">
+            <text class=" iconfont icon-user calm"></text>
+            个人信息
+            <text class="icon-accessory iconfont icon-xiangyoujiantou"></text>
+        </navigator>
+
+        <navigator url="../query/query" open-type="navigate"
+                   hover-class="navigator-hover" class="item item-icon-left item-icon-right ">
+            <text class=" iconfont icon-wodedingdan balanced"></text>
+            报名查询
+            <text class="icon-accessory iconfont icon-xiangyoujiantou"></text>
+        </navigator>
+
+        <navigator url="../score/score" open-type="navigate"
+                   hover-class="navigator-hover" class="item item-icon-left item-icon-right ">
+            <text class=" iconfont icon-xiangguanjiansuo royal"></text>
+            成绩查询
+            <text class="icon-accessory iconfont icon-xiangyoujiantou"></text>
+        </navigator>
+
+        
+        <view class="padding">
+        <navigator wx:if="{{isLogin}}" url="login" bindtap="logout" open-type="navigate"
+                   hover-class="navigator-hover" >
+            <button size="" plain="" class="energized-bg light "> 退出登录</button>
+        </navigator>
+        </view>
+    </view>

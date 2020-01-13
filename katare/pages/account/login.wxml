@@ -1,0 +1,15 @@
+<!--pages/account/login.wxml-->
+<form bindsubmit="loginSubmit">
+<view class="list margin-top">
+    <view class="item item-input">
+        <text class="input-label "> 身份证号</text>
+        <input type="number" bindchange="bindChange" id="user" name="playerIdCrad" placeholder="请输入身份证号码"/>
+    </view>
+
+</view>
+
+<view class="padding-horizontal">
+    <button formType="submit"  class="energized-bg light " >登录
+    </button>
+</view>
+</form>

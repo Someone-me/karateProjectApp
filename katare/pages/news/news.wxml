@@ -1,0 +1,21 @@
+<!--pages/news/news.wxml-->
+<view id="news">
+    <view style="margin: 0.8rem; font-weight: bold;">{{title}}</view>
+    <view style="margin: 0.8rem;" >
+        <text decode="{{true}}" >{{s}}&ensp;&ensp;&ensp;{{t}}</text>
+    </view>
+    
+    <swiper wx:if="{{image.length > 0}}" class='' style="width: {{imageWidth}}px; height: {{imageHeight}}px;" autoplay='true' interval='4000' circular='true' indicator-dots='ture' indicator-color='rgba(0,0,0,0.3)' indicator-active-color='red'>    
+        <block  wx:for='{{image}}'>
+            <swiper-item >      
+                <image style="width: {{imageWidth}}px; height: {{imageHeight}}px;" src='{{item}}'></image>    
+            </swiper-item>
+        </block>
+    </swiper>
+    
+    <view class="light-bg margin-top" style="padding-left: 5%;padding-right: 5%;font-size: 0.8rem; line-height: 1.5;" >
+        <text decode="{{true}}" style="" >&ensp;&ensp;&ensp;&ensp;{{news}}</text>
+    </view>
+    
+
+</view>

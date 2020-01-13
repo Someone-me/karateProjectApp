@@ -1,0 +1,55 @@
+<!--pages/info/info.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset" wx:if="{{p}}">
+<view class="list margin-top">
+    <view class="item item-input">
+        <text class="input-label "> 姓名</text>
+        <input type="text" id="username" name="playerName" placeholder="{{t.playerName}}"/>
+    </view>
+
+    <view class="item item-input">
+        <text class="input-label" > 性别</text>
+        <radio-group class="radio-group" name ='playerSex' bindchange="radioChange">
+          <radio class="radio" value="男" checked="{{sex[0]}}"/>男
+          <radio class="radio" value="女" checked="{{sex[1]}}"/>女
+        </radio-group>
+    </view>
+<!-->
+    <view class="item item-input">
+        <text class="input-label "> 出生年月</text>
+        <input type="year" id="year" name="year" placeholder="请输入出生年月"/>
+    </view>
+    -->
+    <view class="item item-input">
+        <text class="input-label "> 身份证号</text>
+        <input type="idcard" id="user" name="playerIdCrad" placeholder="{{t.playerIdCrad}}"/>
+    </view>
+    <view class="item item-input">
+        <text class="input-label "> 手机号</text>
+        <input type="phone" id="phone" name="playerTel" maxlength="11" placeholder="{{t.playerTel}}"/>
+    </view>
+
+
+    <view class="item item-input">
+          <text class="input-label  "> 所属团体</text>
+      <picker bindchange="pickerChange" value="{{}}" range="{{userOrganizationName}}" range-key="{{'userOrganizationName'}}" >
+          <view>
+          <text>{{t.playerTeam}}</text>
+          </view> 
+     </picker>
+    </view>
+
+    <view class="item item-input">
+        <text class="input-label  "> 身高</text>
+        <input type="text" id="password" name="playerStature" placeholder="{{t.playerStature}}" class="col-20"/>
+        <text class="input-label  "> 体重</text>
+        <input type="number" id="qq" name="playerWeight" placeholder="{{t.playerWeight}}" class="col-20"/>
+    </view>
+
+</view>
+
+<view class="padding-horizontal margin-top" >
+    <button formType="submit"  class="energized-bg light " >修改
+    </button>
+</view>
+
+</form> 

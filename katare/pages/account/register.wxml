@@ -1,0 +1,68 @@
+<!--pages/account/register.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+<view class="list margin-top">
+    <view class="item item-input">
+        <text class="input-label "> 姓名</text>
+        <input type="text" id="username" name="playerName" placeholder="请输入你的真实姓名"/>
+    </view>
+
+    <view class="item item-input">
+        <text class="input-label" > 性别</text>
+        <radio-group class="radio-group" name ='playerSex' bindchange="radioChange">
+          <label class="radio" >
+              <radio value="男" checked="true"/>男
+          </label>
+          <label class="radio" >
+              <radio value="女" checked=""/>女
+          </label>
+        </radio-group>
+    </view>
+<!-->
+    <view class="item item-input">
+        <text class="input-label "> 出生年月</text>
+        <input type="year" id="year" name="year" placeholder="请输入出生年月"/>
+    </view>
+    -->
+    <view class="item item-input">
+        <text class="input-label "> 身份证号</text>
+        <input type="idcard" id="user" name="playerIdCrad" placeholder="请输入身份证号码"/>
+    </view>
+    <view class="item item-input">
+        <text class="input-label "> 手机号</text>
+        <input type="phone" id="phone" name="playerTel"  placeholder="请输入你的手机号"/>
+    </view>
+
+
+    <view class="item item-input">
+          <text class="input-label  "> 所属组织</text>
+      <picker bindchange="pickerChange" value="{{}}" range="{{userOrganizationName}}" range-key="{{'userOrganizationName'}}" >
+          <view>
+          <text>{{playerTeam.playerTeam}}</text>
+          </view> 
+     </picker>
+    </view>
+    
+
+
+    <view class="item item-input">
+        <text class="input-label  "> 身高</text>
+        <input type="number" id="password" maxlength="3" name="playerStature" placeholder="cm" class="col-20"/>
+        <text class="input-label  "> 体重</text>
+        <input type="number" id="qq" maxlength="2" name="playerWeight" placeholder="kg" class="col-20"/>
+    </view>
+
+</view>
+
+<view class="padding-horizontal margin-top" >
+    <button formType="submit"  class="energized-bg light " >注册
+    </button>
+</view>
+
+<view class="padding-horizontal margin-top" >
+    <button  formType='reset' class="energized-bg light " >重置
+    </button>
+</view>
+
+
+
+</form> 

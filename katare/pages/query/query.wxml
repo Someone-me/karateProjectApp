@@ -1,0 +1,35 @@
+<!--pages/query/query.wxml-->
+<!--这段输入身份证查询>-->
+<form bindsubmit="query" >
+<view class="list margin-top">
+    <view class="item item-input">
+        <text class="input-label "> 身份证号</text>
+        <input type="number"   id="user" name="playerIdCrad" placeholder="请输入身份证号码"/>
+    </view>
+</view>
+<view class="">
+    <button formType="submit"  class="energized-bg light select" >查询
+    </button>
+</view>
+</form>
+<!--这段输入身份证查询>-->
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">赛事名称</view>
+    <view class="th">参赛组别</view>
+    <view class="th ">报名时间</view>
+  </view>
+  <block wx:for="{{result}}" >
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item[0]}}</view>
+      <view class="td">{{item[1]}}</view>
+      <view class="td">{{item[2]}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item[0]}}</view>
+      <view class="td">{{item[1]}}</view>
+      <view class="td">{{item[2]}}</view>    
+    </view>
+  </block>
+</view>

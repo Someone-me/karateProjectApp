@@ -1,0 +1,38 @@
+/* pages/score/score.wxss */
+.select{
+margin-top: -60rpx;
+margin-bottom: 30rpx;
+margin-left: 10rpx;
+margin-right: 10rpx;
+}
+.table {
+  border: 0px solid darkgray;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.6rem;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background:  #F26604;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
